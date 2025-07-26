@@ -1,0 +1,267 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #fbc8dc;
+  color: white;
+  font-size: larger;
+  text-align: justify;
+}
+
+main {
+  flex: 1;
+}
+
+/* Sticky Header */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgb(218, 54, 54); 
+  padding: 5px 0;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  color: white;
+  min-height: 70px;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: black;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #222;
+}
+
+.nav-links .btn {
+  padding: 8px 16px;
+  background-color: white;
+  color: rgb(210, 38, 67);
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links .btn:hover {
+  background-color: #2e0ee6;
+  color: white;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 25px;
+  background-color: rgb(218, 54, 54);
+  color: black;
+  font-size: 18px;
+  border-top: 1px solid #ddd;
+}
+
+.card {
+  background-color: rgb(36, 36, 138);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin-inline: auto;
+  margin-block: 40px;
+  max-width: 1459px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+  margin-bottom: 15px;
+  color: white;
+}
+
+.card p {
+  color: white;
+  line-height: 1.6;
+}
+
+/* Side by Side Layout */
+.side-by-side {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1450px;
+  margin-inline: auto;
+}
+
+.side-by-side .card {
+  flex: 1;
+  min-width: 300px;
+  margin: 0;
+}
+.card #skills, #interests{
+  margin-top: 20px;
+  background-color: rgb(248, 143, 52);
+  color: black;
+  transform: none;
+}
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Images */
+img {
+  max-width: 250px;
+  max-height: 250px;
+}
+
+.about-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap; 
+}
+
+.about-image img {
+  max-width: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+section {
+  scroll-margin-top: 145px;
+}
+
+/* Project Section List */
+#projects ul {
+  list-style-type: square;
+  color: white;
+  padding-left: 20px;
+}
+
+#projects a,
+#contact a {
+  color: red;
+}
+
+/*Container*/
+.container{
+  border-radius: 12px;
+  padding: 30px;
+  margin: 40px auto;
+  margin-right: 30px;
+   background-color: #fdf3e7;
+  color: black;
+}
+.form{
+  justify-self: center;
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 40px;
+  width:900px;
+   background-color: #fdf3e7;
+  color: black;
+    box-shadow: 0 10px 20px grey;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+form{
+   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+      justify-self: center;
+}
+.form:hover{
+transform: translateY(-3px);
+}
+span {
+  color: black;
+  line-height: 1.6;
+}
+
+.white {
+  color: white;
+}
+button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: 2px solid black;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+a {
+  color: white;
+}
+
+a:hover {
+  color: rgb(33, 32, 32);
+}
+
+/* Input Styling */
+.name, .email, .subject{
+  width: 500px;
+  height: 50px;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+
+.message, textarea {
+  border-radius: 10px;
+  border: 2px solid black;
+}
+input::placeholder,
+textarea::placeholder {
+  text-align: start;
+  padding: 10px;
+}
